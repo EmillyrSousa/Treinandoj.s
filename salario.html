@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        // Coletando os dados do usuário
+        var ht = parseFloat(window.prompt('Quantas horas você trabalha por mês?'));
+        var vh = Number(window.prompt('Qual é o valor da sua hora trabalhada?'));
+        var pd = Number(window.prompt('Qual a porcentagem dos seus descontos?'));
+
+        // Verificando se os valores são válidos
+        if (isNaN(ht) || isNaN(vh) || isNaN(pd) || ht < 0 || vh < 0 || pd < 0) {
+            window.alert('Por favor, insira valores válidos!');
+        } else {
+            // Cálculos
+            var sb = ht * vh; // Salário bruto
+            var td = (pd * sb) / 100; // Total de descontos
+            var sl = sb - td; // Salário líquido
+            var inss = (sb * 9) / 100; // INSS (9%)
+
+            // Exibindo os resultados
+            window.alert(`Suas informações:
+            - Horas trabalhadas: ${ht}
+            - Valor por hora: R$ ${vh.toFixed(2)}
+            - Percentual de desconto: ${pd}%
+            - Salário bruto: R$ ${sb.toFixed(2)}
+            - Total de descontos: R$ ${td.toFixed(2)}
+            - Salário líquido: R$ ${sl.toFixed(2)}
+            - Desconto do INSS (9%): R$ ${inss.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        var num = parseFloat(prompt('Digite um número (ex: 2,5 ou 3):'));
+        
+        if (isNaN(num)) {
+            alert('Entrada inválida. Por favor, insira um número válido. Exemplos: 2, 3 ou 4.5');
+        } else {
+            var dobro = num * 2;
+            alert('Resultado:\n' +
+                  'Número digitado: ' + num + '\n' +
+                  'O dobro desse número é: ' + dobro);
+        }
+    </script>
+</body>
+</html>

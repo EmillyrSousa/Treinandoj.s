@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        var op = window.prompt('Digite 1 para gasolina, 2 para álcool e 0 para sair');
+
+        if (op == 1) {
+            var litros = parseFloat(window.prompt('Quantos litros de gasolina você tem disponível?'));
+            var km = parseFloat(window.prompt('Quantos quilômetros você pretende percorrer?'));
+            var total = litros / km;
+            var valor = litros * 2.90;
+
+            alert('Você tem disponível: ' + litros + ' litros de gasolina.\n' +
+                  'Você percorreu: ' + km + ' quilômetros.\n' +
+                  'O consumo total é de: ' + total + '.\n' +
+                  'O valor total é: ' + valor + '.');
+        } else if (op == 2) {
+            var l = parseFloat(window.prompt('Quantos litros de álcool você tem disponível?'));
+            var k = parseFloat(window.prompt('Quantos quilômetros você pretende percorrer?'));
+            var t = l / k;
+            var valora = l * 2.90;
+
+            alert('Você tem disponível: ' + l + ' litros de álcool.\n' +
+                  'Você percorreu: ' + k + ' quilômetros.\n' +
+                  'O consumo total é de: ' + t + '.\n' +
+                  'O valor total é: ' + valora + '.');
+        } else if (op == 0) {
+            alert('Você optou por sair. Até logo!');
+        } else {
+            alert('Opção inválida. Por favor, tente novamente.');
+        }
+    </script>
+</body>
+</html>

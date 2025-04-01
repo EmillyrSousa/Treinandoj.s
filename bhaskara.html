@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bhaskara</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Bhaskara</h1>
+    <script>
+        function calcularRaizes(a, b, c, igualdade) {
+            var delta = (b * b) - (4 * a * (igualdade !== 0 ? igualdade : c));
+            
+            if (delta < 0) {
+                window.alert('A equação não possui raízes reais, pois o delta é negativo.');
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                window.alert('As raízes da equação são:\n' +
+                             'x1 = ' + x1 + '\n' +
+                             'x2 = ' + x2);
+            }
+        }
+
+        var a = Number(window.prompt('Digite o coeficiente a (não pode ser zero):'));
+        var b = Number(window.prompt('Digite o coeficiente b:'));
+        var c = Number(window.prompt('Digite o coeficiente c:'));
+        var igualdade = Number(window.prompt('Digite o valor da igualdade (0 para padrão):'));
+
+        if (a === 0) {
+            window.alert('O coeficiente "a" não pode ser zero para uma equação quadrática.');
+        } else {
+            calcularRaizes(a, b, c, igualdade);
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bhaskara</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Bhaskara</h1>
+    <script>
+        function calcularRaizes(a, b, c, igualdade) {
+            var delta = (b * b) - (4 * a * (igualdade !== 0 ? igualdade : c));
+            
+            if (delta < 0) {
+                window.alert('A equação não possui raízes reais, pois o delta é negativo.');
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                window.alert('As raízes da equação são:\n' +
+                             'x1 = ' + x1 + '\n' +
+                             'x2 = ' + x2);
+            }
+        }
+
+        var a = Number(window.prompt('Digite o coeficiente a (não pode ser zero):'));
+        var b = Number(window.prompt('Digite o coeficiente b:'));
+        var c = Number(window.prompt('Digite o coeficiente c:'));
+        var igualdade = Number(window.prompt('Digite o valor da igualdade (0 para padrão):'));
+
+        if (a === 0) {
+            window.alert('O coeficiente "a" não pode ser zero para uma equação quadrática.');
+        } else {
+            calcularRaizes(a, b, c, igualdade);
+        }
+    </script>
+</body>
+</html>
